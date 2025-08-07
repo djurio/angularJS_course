@@ -4,7 +4,7 @@
     angular.module('assignment1App', [])
         .controller('Assignment1Controller', function ($scope) {
             $scope.dishes = "";
-            $scope.input = "Inicializado";
+            $scope.input = "";
             $scope.buttonClicked = function () {
                 console.log($scope.input)
                 if ($scope.input === "") {
