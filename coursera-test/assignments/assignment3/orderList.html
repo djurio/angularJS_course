@@ -1,0 +1,12 @@
+<div>
+
+    <h4>{{myTitle}}</h4>
+    <ol class="form-group list-group">
+        <li class="form-group list-group-item " ng-repeat="item in items">
+            {{ item.name }} : {{ item.price_large }}$ : {{ item.description }}
+            <button ng-click="onRemove({index: $index});">Remove Item</button>
+        </li>
+    </ol>
+   
+    <!--<div class="error" ng-if="list.cookiesInList()">WARNING! WARNING! COOKIES DETECTED!</div>-->
+</div>
