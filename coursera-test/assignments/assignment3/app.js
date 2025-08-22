@@ -6,7 +6,7 @@
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
         .constant('api_url', 'https://coursera-jhu-default-rtdb.firebaseio.com/')
-        .directive('orderList', OrderListDirective);
+        .directive('foundItems', OrderListDirective);
 
 
     function OrderListDirective() {
