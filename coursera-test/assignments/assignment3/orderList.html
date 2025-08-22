@@ -2,11 +2,13 @@
 
     <h4>{{myTitle}}</h4>
     <ol class="form-group list-group">
-        <li class="form-group list-group-item " ng-repeat="item in items">
-            {{ item.name }} : {{ item.price_large }}$ : {{ item.description }}
-            <button ng-click="onRemove({index: $index});">Remove Item</button>
+        <li class="form-group list-group-item " ng-repeat="item in list.items">
+            <b>Name:</b>{{ item.name }} <br />
+            <b>Short Name:</b>{{ item.short_name }} <br />
+            <b>Description: </b>{{ item.description }}
+            <button ng-click="list.onRemove({index: $index});">Don't want this one!</button>
         </li>
     </ol>
    
-    <!--<div class="error" ng-if="list.cookiesInList()">WARNING! WARNING! COOKIES DETECTED!</div>-->
+    <div class="error" ng-if="list.no_element_found()">Nothing found!!</div>
 </div>

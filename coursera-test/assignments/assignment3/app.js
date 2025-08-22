@@ -16,10 +16,23 @@
                 items: '<',
                 myTitle: '@title',
                 onRemove: '&'
-            }
+            },
+            controller: NarrowItDownDirectiveController,
+            controllerAs: 'list',
+            bindToController: true
         };
 
         return ddo;
+    }
+
+
+    function NarrowItDownDirectiveController() {
+        var list = this;
+
+        list.no_element_found = function () {
+            return list.items.length === 0;
+                
+        };
     }
 
     
