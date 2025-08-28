@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    "\\coursera-test"
+    "",
+    "\\coursera-test",
+    "\\coursera-test\\assignments",
+    "\\coursera-test\\assignments\\assignment3",
+    "\\coursera-test\\assignments\\assignment3\\styles"
   ],
+  "SelectedNode": "\\coursera-test\\assignments\\assignment3\\styles\\bootstrap.min.css",
   "PreviewInSolutionExplorer": false
 }
