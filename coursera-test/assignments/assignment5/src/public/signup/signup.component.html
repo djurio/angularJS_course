@@ -1,0 +1,47 @@
+<form name="form_signup" class="container mt-4" ng-submit="$ctrl.submit()">
+    <div class="mb-3">
+        <label for="first name" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Name" ng-model="$ctrl.user.firstname" name="firstname" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="last name" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Last Name" ng-model="$ctrl.user.lastname" name="lastname" required>
+    </div>
+    <div class="mb-3">
+        <label for="email address" class="form-label">Email Address</label>
+        <input class="form-control" id="emailAddress" placeholder="email@address.com" ng-model="$ctrl.user.email" type="email" name="email" required>
+        <div class="text-danger" ng-show="form_signup.email.$touched && form_signup.email.$invalid">
+            <small ng-show="form_signup.email.$error.required">El email es obligatorio.</small>
+            <small ng-show="form_signup.email.$error.email">Formato de email inválido.</small>
+        </div>
+    </div>
+
+
+
+    <div class="mb-3">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input class="form-control" id="phoneNumber" placeholder="666121212" ng-model="$ctrl.user.phonenumber" name="phonenumber" ng-pattern="/^\d{9}$/" required>
+        <div class="text-danger" ng-show="form_signup.phonenumber.$touched && form_signup.phonenumber.$invalid">
+            <small ng-show="form_signup.phonenumber.$error.required">The telephone number is required.</small>
+            <small ng-show="form_signup.phonenumber.$error.pattern">It should be just 9 digits long.</small>
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <label for="favouriteDish" class="form-label">Favourite Dish</label>
+        <input class="form-control" id="short_name" ng-model="$ctrl.user.short_name">
+    </div>
+
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" ng-disabled="form_signup.$invalid" ng-submit="$ctrl.submit()">Send</button>
+    <div class="mb-3">
+        <div class="text-danger" ng-show="$ctrl.item_not_exists">
+            No such menu number exists.
+        </div>
+        <div class="alert-info" ng-show="(!$ctrl.item_not_exists) && $ctrl.item_saved">
+            Your information has been saved
+        </div>
+    </div>
+</form>

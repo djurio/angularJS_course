@@ -5,6 +5,6 @@
     "\\src\\menu",
     "\\src\\menu\\templates"
   ],
-  "SelectedNode": "\\src\\menu\\templates\\categories.template.html",
+  "SelectedNode": "\\src\\menu\\category-detail.controller.js",
   "PreviewInSolutionExplorer": false
 }
